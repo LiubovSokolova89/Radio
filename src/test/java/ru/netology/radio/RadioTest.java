@@ -92,6 +92,26 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldMaxVolume() {
+        Radio radio = new Radio();
+        radio.setToMaxVolume();
+        int expected = 10;
+        int actual = radio.volume;
+
+        Assertions.assertEquals(expected , actual);
+    }
+
+    @Test
+    public void shouldMinVolume() {
+        Radio radio = new Radio();
+        radio.setToMinVolume();
+        int expected = 0;
+        int actual = radio.volume;
+
+        Assertions.assertEquals(expected , actual);
+    }
+
+    @Test
     public void shouldSetVolumeIfVolumeIsOverMax() {
         Radio radio = new Radio();
         radio.setVolume(11);
