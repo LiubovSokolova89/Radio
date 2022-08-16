@@ -11,7 +11,10 @@ public class RadioTest {
     public void shouldSetCurrentRadioStationBackToZero() {
         Radio radio = new Radio();
         radio.setCurrentStation(10);
+<<<<<<< Updated upstream
         radio.decreaseRadioStation();
+=======
+>>>>>>> Stashed changes
         int expected = 0;
         int actual = radio.getCurrentStation();
 
@@ -23,8 +26,11 @@ public class RadioTest {
     public void shouldMaxRadioStation() {
         Radio radio = new Radio();
         radio.setToMaxStation();
+<<<<<<< Updated upstream
         radio.changeOnPreviousRadioStation();
         radio.increaseRadioStation();
+=======
+>>>>>>> Stashed changes
         int expected = 9;
         int actual = radio.getCurrentStation();
 
@@ -35,7 +41,10 @@ public class RadioTest {
     public void shouldMinRadioStation() {
         Radio radio = new Radio();
         radio.setToMinStation();
+<<<<<<< Updated upstream
         radio.changeOnNextRadioStation();
+=======
+>>>>>>> Stashed changes
         int expected = 0;
         int actual = radio.getCurrentStation();
 
@@ -80,7 +89,11 @@ public class RadioTest {
     public void shouldChangeOnPreviousRadioStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(7);
+<<<<<<< Updated upstream
         radio.decreaseRadioStation();
+=======
+        radio.changeOnPreviousRadioStation();
+>>>>>>> Stashed changes
         int expected = 6;
         int actual = radio.getCurrentStation();
 
@@ -91,7 +104,11 @@ public class RadioTest {
     public void shouldChangeOnNextRadioStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(1);
+<<<<<<< Updated upstream
         radio.increaseRadioStation();
+=======
+        radio.changeOnNextRadioStation();
+>>>>>>> Stashed changes
         int expected = 2;
         int actual = radio.getCurrentStation();
 
@@ -143,7 +160,11 @@ public class RadioTest {
     public void volumeUpForOne() {
         Radio radio = new Radio();
         radio.setVolume(6);
+<<<<<<< Updated upstream
         radio.increaseVolume();
+=======
+        radio.changeVolume();
+>>>>>>> Stashed changes
         int expected = 7;
         int actual = radio.getVolume();
 
@@ -166,7 +187,11 @@ public class RadioTest {
     public void shouldNotChangeVolumeIfVolumeIsMax() {
         Radio radio = new Radio();
         radio.setVolume(10);
+<<<<<<< Updated upstream
         radio.increaseVolume();
+=======
+        radio.changeVolume();
+>>>>>>> Stashed changes
         int expected = 10;
         int actual = radio.getVolume();
 
