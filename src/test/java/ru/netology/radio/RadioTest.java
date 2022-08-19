@@ -20,6 +20,16 @@ public class RadioTest {
         Assertions.assertEquals(0, radio.getVolume());
     }
 
+    @Test
+    public void testRadioConstructors() {
+        Radio radio = new Radio();
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected , actual);
+
+    }
+
 
     @Test
     public void shouldSetCurrentRadioStationBackToZero() {
