@@ -31,14 +31,19 @@ public class Radio {
             if (currentStation <= 0) {
                 currentStation = 9;
             }
-            else currentStation = currentStation - 1;
+            else {
+                currentStation = currentStation - 1;
+            }
         }
 
 
         public void changeOnNextRadioStation () {
             if (currentStation == 9) {
                 currentStation = 0;
-            } else currentStation = currentStation + 1;
+            }
+            else {
+                currentStation = currentStation + 1;
+            }
         }
 
 
