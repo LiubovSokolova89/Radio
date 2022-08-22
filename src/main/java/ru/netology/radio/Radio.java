@@ -30,8 +30,7 @@ public class Radio {
         public void changeOnPreviousRadioStation() {
             if (currentStation <= 0) {
                 currentStation = 9;
-            }
-            else {
+            } else {
                 currentStation = currentStation - 1;
             }
         }
@@ -40,8 +39,7 @@ public class Radio {
         public void changeOnNextRadioStation () {
             if (currentStation == 9) {
                 currentStation = 0;
-            }
-            else {
+            } else {
                 currentStation = currentStation + 1;
             }
         }
