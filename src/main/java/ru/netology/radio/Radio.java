@@ -10,18 +10,14 @@ public class Radio {
     private int currentStation = minStation;
     private int volume = minVolume;
 
-    public Radio(int minStation , int maxStation , int minVolume , int maxVolume) {
-        this.minStation = minStation;
+    public Radio(int minStation, int maxStation, int minVolume, int maxVolume) {
+        
         this.maxStation = maxStation;
-        this.minVolume = minVolume;
-        this.maxVolume = maxVolume;
-        this.currentStation = minStation;
-        this.volume = minVolume;
+
     }
 
     public Radio() {
     }
-
 
 
     public int getCurrentStation() {
@@ -29,7 +25,7 @@ public class Radio {
     }
 
     public int getMaxStation() {
-        return maxStation -1;
+        return maxStation - 1;
     }
 
     public int getMinStation() {
@@ -40,7 +36,7 @@ public class Radio {
         if (newCurrentStation < minStation) {
             return;
         }
-        if (newCurrentStation > maxStation -1) {
+        if (newCurrentStation > maxStation - 1) {
             return;
         }
         currentStation = newCurrentStation;
@@ -53,24 +49,24 @@ public class Radio {
 
     public void changeOnPreviousRadioStation() {
         if (currentStation <= minStation) {
-            currentStation = maxStation -1;
+            currentStation = maxStation - 1;
         }
     }
 
     public void changeOnNextRadioStation() {
-        if (currentStation == maxStation -1) {
+        if (currentStation == maxStation - 1) {
             currentStation = minStation;
         }
     }
 
     public void increaseRadioStation() {
-        if (currentStation < maxStation -1) {
+        if (currentStation < maxStation - 1) {
             currentStation = currentStation + 1;
         }
     }
 
     public void setToMaxStation() {
-        currentStation = maxStation -1;
+        currentStation = maxStation - 1;
     }
 
     public void decreaseRadioStation() {
@@ -106,7 +102,7 @@ public class Radio {
     }
 
     public void increaseVolume() {
-        if (volume < maxVolume -1) {
+        if (volume < maxVolume - 1) {
             volume = volume + 1;
         }
     }
