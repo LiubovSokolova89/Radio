@@ -22,7 +22,7 @@ public class RadioTest {
 
     @Test
     public void testRadioConstructors() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         int expected = 0;
         int actual = radio.getCurrentStation();
 
