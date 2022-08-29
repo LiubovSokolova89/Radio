@@ -10,7 +10,7 @@ public class RadioTest {
 
     @Test
     public void validateChangFields() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
 
         Assertions.assertEquals(9, radio.getMaxStation());
         Assertions.assertEquals(0, radio.getMinStation());
@@ -34,7 +34,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetCurrentRadioStationBackToZero() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setCurrentStation(10);
         radio.decreaseRadioStation();
 
@@ -45,7 +45,7 @@ public class RadioTest {
 
     @Test
     public void shouldMaxRadioStation() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setToMaxStation();
         radio.changeOnPreviousRadioStation();
         radio.increaseRadioStation();
@@ -56,7 +56,7 @@ public class RadioTest {
 
     @Test
     public void shouldMinRadioStation() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setToMinStation();
         radio.changeOnNextRadioStation();
 
@@ -66,7 +66,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetCurrentRadioStation() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setCurrentStation(-1);
 
 
@@ -76,7 +76,7 @@ public class RadioTest {
 
     @Test
     public void shouldChangeOnPreviousRadioStationIfStationIsMin() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setCurrentStation(0);
         radio.changeOnPreviousRadioStation();
 
@@ -86,7 +86,7 @@ public class RadioTest {
 
     @Test
     public void shouldChangeOnPreviousRadioStationIfStationIsMax() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setCurrentStation(9);
         radio.changeOnNextRadioStation();
 
@@ -96,7 +96,7 @@ public class RadioTest {
 
     @Test
     public void shouldChangeOnPreviousRadioStation() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setCurrentStation(7);
         radio.decreaseRadioStation();
 
@@ -106,7 +106,7 @@ public class RadioTest {
 
     @Test
     public void shouldChangeOnNextRadioStation() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setCurrentStation(1);
         radio.increaseRadioStation();
 
@@ -117,7 +117,7 @@ public class RadioTest {
 
     @Test
     public void shouldMaxVolume() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setToMaxVolume();
 
 
@@ -126,7 +126,7 @@ public class RadioTest {
 
     @Test
     public void shouldMinVolume() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setToMinVolume();
 
 
@@ -135,7 +135,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetVolumeIfVolumeIsOverMax() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setVolume(101);
 
 
@@ -144,7 +144,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetVolumeIfVolumeIsUnderMin() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setVolume(-1);
 
 
@@ -153,7 +153,7 @@ public class RadioTest {
 
     @Test
     public void volumeUpForOne() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setVolume(6);
         radio.increaseVolume();
 
@@ -164,7 +164,7 @@ public class RadioTest {
 
     @Test
     public void volumeDownForOne() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setVolume(99);
         radio.decreaseVolume();
 
@@ -174,7 +174,7 @@ public class RadioTest {
 
     @Test
     public void shouldNotChangeVolumeIfVolumeIsMax() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setToMaxVolume();
         radio.increaseVolume();
 
@@ -184,7 +184,7 @@ public class RadioTest {
 
     @Test
     public void shouldNotChangeVolumeIfVolumeIsMin() {
-        Radio radio = new Radio(0, 10, 0, 100);
+        Radio radio = new Radio(10);
         radio.setVolume(0);
         radio.decreaseVolume();
 
